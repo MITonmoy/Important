@@ -1,0 +1,54 @@
+<template>
+    <require from="../popover-menu/popover-menu"></require>
+    <div ref='p1'>
+        <div class="popover-title">Welcome!</div>
+        <div class="popover-content list-group">
+            <a class="list-group-item" style="cursor: pointer;"><i class="fa fa-user"></i> Your Profile</a>
+            <a class="list-group-item" style="cursor: pointer;"><i class="fa fa-search"></i> Search</a>
+            <a href="~/Account/SelectSite" class="list-group-item"><i class="fa fa-server"></i> Switch Site</a>
+            <a href="~/Account/Logout" class="list-group-item"><i class="fa fa-sign-out"></i> Sign Out</a>
+        </div>
+    </div>
+    <ul class="nav navbar-nav navbar-right my-navbar my-navbar-right">
+        <li class="nav-item">
+            <a href="#" class="fsTogglerBtn" onclick="toggleFullScreen($(this)); return false;">
+                <i class="fa fa-arrows-alt"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" onclick="launchSubscribeModal(); return false;">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a click.delegate="ddlExcel()">
+                <i class="fa fa-file-excel-o"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a click.delegate="ddlPdf()">
+                <i class="fa fa-file-pdf-o"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a click.delegate="ddlImg()">
+                <i class="fa fa-file-image-o"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a click.delegate="ddlPpt()">
+                <i class="fa fa-file-powerpoint-o"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a popmenu="customPopover.bind: p1">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="nav-item hidden-xs">
+            <div class="navbar-brand">
+                <img class="img-responsive img-thumbnail" style="height:40px; width:60px;" src="../../images/logo_mma_gold.png" />
+            </div>
+        </li>
+    </ul>
+</template>

@@ -1,0 +1,42 @@
+﻿@using Tableau_Wrapper.Models
+
+<ul class="nav navbar-nav my-navbar">
+    <li class="nav-item active"><a data-toggle="tab" class="nav-link" href="#content"><i class="fa fa-folder-open"></i> Views</a></li>
+    <li id="navExp" class="nav-item hidden">
+        <a href="#"><i class="fa fa-plus"></i></a>
+    </li>
+</ul>
+<ul class="nav navbar-nav navbar-right my-navbar my-navbar-right">
+    @*<li class="nav-item">
+        <a href="#" data-toggle="modal" data-target="#originalview" onclick="ddlOriginalView(); return false;"><i class="fa fa-bar-chart"></i></a>
+    </li>*@
+    <li class="nav-item">
+        <a href="#" class="fsTogglerBtn" onclick="toggleFullScreen($(this)); return false;"><i class="fa fa-arrows-alt"></i></a>
+    </li>
+    <li class="nav-item">
+        <a href="#" onclick="launchSubscribeModal(); return false;"><i class="fa fa-envelope"></i></a>
+    </li>
+    <li class="nav-item">
+        <a href="#" onclick="ddlExcel(); return false;"><i class="fa fa-file-excel-o"></i></a>
+    </li>
+    <li class="nav-item">
+        <a href="#" onclick="ddlPdf(); return false;"><i class="fa fa-file-pdf-o"></i></a>
+    </li>                                                
+    <li class="nav-item">                                
+        <a href="#" onclick="ddlImg(); return false;"><i class="fa fa-file-image-o"></i></a>
+    </li>                                                
+    <li class="nav-item">                                
+        <a href="#" onclick="ddlPpt(); return false;"><i class="fa fa-file-powerpoint-o"></i></a>
+    </li>
+    <li class="nav-item">
+        <a id="ellipsis-menu" href="#" data-toggle="popover" title="<h4>Welcome! @(((string)HttpContext.Current.Session[AppConstants.TsUsernameSessionKey]).Split('\\').Last())</h4>" data-container="body" 
+           data-placement="bottom" data-html=true data-trigger="focus">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="nav-item hidden-xs">
+        <div class="navbar-brand">
+            <img class="img-responsive img-thumbnail" style="height:40px; width:60px;" src="~/Content/Images/logo_mma_gold.png" />
+        </div>
+    </li>
+</ul>

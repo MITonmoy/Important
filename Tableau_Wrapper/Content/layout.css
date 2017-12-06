@@ -1,0 +1,117 @@
+﻿.my-navbar > .nav-item > a {
+    border: 1px solid transparent;
+    color: white !important;
+}
+
+    .my-navbar > .nav-item > a:hover {
+        border: 1px solid white !important;
+    }
+
+.my-navbar > .nav-item.active > a,
+.my-navbar > .nav-item.active > a:focus {
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white !important;
+    color: black !important;
+}
+
+body {
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif !important;*/
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    min-height: 100%;
+}
+
+    body .tab-content {
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        padding-top: 50px;
+        min-height: calc(100vh - 55px);
+    }
+
+.body-content {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+header .navbar {
+    border-radius: unset;
+    padding-bottom: unset;
+    margin-bottom: unset;
+    border-top-color: #9ec1fa;
+    border-left-color: #9ec1fa;
+    border-right-color: #9ec1fa;
+    border-bottom-color: white;
+    /*background-color: #9ec1fa;*/
+    background-color: #cccccc;
+}
+
+header .nav-tabs {
+    padding-top: 1px;
+    border-bottom: unset;
+}
+
+header .navbar-brand {
+    padding-top: 5px;
+}
+
+nav .nav-link {
+    font-size: 2rem;
+    color: white;
+}
+
+nav a.nav-link:hover {
+    background: transparent;
+}
+
+.nav-expand {
+    display: block !important;
+}
+
+.popover {
+    border: 2px solid rebeccapurple;
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+}
+
+.popover-title {
+    min-width: 210px;
+}
+
+.popover-content {
+    padding: unset;
+}
+
+.ddlItems {
+    display: none;
+    z-index: 1;
+    padding: unset;
+    margin: unset;
+}
+
+.ddlGroup .ddlItemsLink{
+    text-decoration: none;
+    color: inherit;
+}
+
+.ddlGroup:hover .ddlItems {
+    display: block;
+}
+
+.my-navbar-right .nav-item a i.fa {
+    font-size: 1.3vw;
+    color: black;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    min-height: 50px;
+    margin-top: 5px;
+}
+
+    .footer .container {
+        width: 100%;
+    }

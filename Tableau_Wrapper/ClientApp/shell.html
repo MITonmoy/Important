@@ -1,0 +1,42 @@
+<template>
+    <require from="./site.css"></require>
+    <require from="./layout.css"></require>
+    <!--<require from="./signin.css"></require>-->
+    <require from="./home-index.css"></require>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-brand visible-xs">
+                    <img class="img-responsive img-thumbnail" style="height:40px; width:60px;" src="images/logo_mma_gold.png" />
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs" href="Home/Index">
+                        <img src="images/QIMSlogo_tm_hrz_pos_resz_tran.png" style="height:40px;" alt="">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <compose view-model="components/fullnav/fullnav">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="tab-content">
+        <div id="content" class="tab-pane active">
+            <div class="body-content">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="well-sm">
+                <p>&copy; QuintilesIMS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</template>

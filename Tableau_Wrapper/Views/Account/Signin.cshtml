@@ -1,0 +1,76 @@
+﻿@model Tableau_Wrapper.Models.SigninViewModel
+@{
+    ViewData["Title"] = "Sign In";
+    Layout = "~/Views/Shared/_Layout_old_v2.cshtml";
+}
+
+@section navigation{
+    <ul class="nav navbar-nav navbar-right my-navbar">
+        <li class="nav-item hidden-xs">
+            <div class="navbar-brand">
+                <img class="img-responsive img-thumbnail" style="height:40px; width:60px;" src="~/Content/Images/logo_mma_gold.png" />
+            </div>
+        </li>
+    </ul>
+}
+
+<div class="container-fluid">
+    <div class="row flexdisp content-wrapper-siginin">
+        <div class="col-md-offset-4 col-md-3 col-sm-offset-3 col-sm-4 col-xs-12 form-signin-wrapper">
+            <form class="form-signin" action="~/Account/Signin" method="post">
+                <div class="form-group">
+                    <img class="img-responsive" style="margin: 0 auto;" src="~/Content/Images/qims_logo_only.png" alt="">
+                </div>
+                <div class="form-group">
+                    <label for="inputUserName" class="sr-only">User Name</label>
+                    <input type="text" id="inputUserName" name="Username" class="form-control" placeholder="User Name" required="" autofocus="">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" name="Password" class="form-control" placeholder="Password" required="">
+                </div>
+                <div class="checkbox">
+                    <a class="pull-right" target="_blank" href="https://phw1dpmska.imshealth.com/" title="First Time Users Register Here to start the registration process. Follow the steps to verify your identity, select your security questions, enter your contact information. You will then have the ability to change, unlock and retrieve forgot passwords.">Forgot Password?</a>
+                    <label><input type="checkbox" name="RememberMe" value="remember-me"> Remember me</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
+            <div>
+                <p style="display:@((Model != null && Model.IsFailedAuthentication)? "block" : "none"); color:red; text-align:center;">Username or password is incorrect.</p>
+            </div>
+        </div>
+        <div class="col-sm-offset-1 col-sm-4 updates-content-wrapper">
+            <h3 class="text-left">News and Information</h3>
+            <div class="updates-content">
+                <div class="marquee-content">
+                    <ul>
+                        <li>
+                            <h4>Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                        <li>
+                            <h4>Nested Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                        <li>
+                            <h4>Nested Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                        <li>
+                            <h4>Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                        <li>
+                            <h4>Nested Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                        <li>
+                            <h4>Nested Media heading</h4>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A70370A-56A1-48E0-8BBF-D592733C4570}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tableau_Wrapper</RootNamespace>
+    <AssemblyName>Tableau_Wrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CacheProviders\FavouritesCacheProvider.cs" />
+    <Compile Include="CacheProviders\XmlFileCacheProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseAppController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Helpers\ChecksumHelper.cs" />
+    <Compile Include="Helpers\CustomAttributes\RequireConditionalHttps.cs" />
+    <Compile Include="Helpers\Extensions\RouteDataExtensions.cs" />
+    <Compile Include="Models\UserCookie.cs" />
+    <Compile Include="Models\ViewModels\PptDownloadModel.cs" />
+    <Compile Include="Helpers\AccountValidator.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\XmlFileHelper.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ViewModels\IndexViewModel.cs" />
+    <Compile Include="Models\UserCategories.cs" />
+    <Compile Include="Models\UserFavLists.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Extensions\SessionExtensions.cs" />
+    <Compile Include="Models\AppConstants.cs" />
+    <Compile Include="Models\SigninViewModel.cs" />
+    <Compile Include="Models\SiteSelectionViewModel.cs" />
+    <Compile Include="Models\TableauSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="CacheProviders\ICacheProvider.cs" />
+    <Compile Include="Repositories\IndexViewModelRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\NotesRepository.cs" />
+    <Compile Include="Repositories\NotesRepository2.cs" />
+    <Compile Include="Repositories\ViewRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-multiselect.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\home-index.css" />
+    <Content Include="Content\Images\loading.gif" />
+    <Content Include="Content\Images\login-background.png" />
+    <Content Include="Content\Images\logo_mma_gold.png" />
+    <Content Include="Content\Images\QIMSlogo_tm_hrz_pos_resz_tran.png" />
+    <Content Include="Content\Images\qims_logo_only.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-02a945e6-d561-4889-aa89-458636d83053\workbook-00db3ee9-dfe0-4aa4-ad04-a1a63bfc7591.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-02a945e6-d561-4889-aa89-458636d83053\workbook-08c2c18a-6328-42ba-b1f5-eae4f23d14ea.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-02a945e6-d561-4889-aa89-458636d83053\workbook-8bfc16ed-89d5-47e9-b251-c94d2d02bb65.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-008328e5-72c0-48c2-a69c-f2601f7b3f85.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-03ef858f-d721-45c4-b924-eb5d6179623b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-0dba4d17-2109-4e20-a808-ecf3400c20bc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-14585f88-2dd9-478d-bd15-3fbf074dff15.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-150225b1-5bd6-42c5-ac95-39cbeb9aa096.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-2214c8e4-7cdd-4369-9d26-9163f16727ff.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-483ce3fc-c1b6-4298-9ae4-d7b29c58395c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-524b14d9-97b8-4232-a364-b7912aa5ee40.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-5d57d3df-834a-4ebc-8dab-d7e98ed32caf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-5e9bca42-2bec-4f9d-8cd4-37a4c9bea5ea.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-6e6beb1c-d1e8-4611-8c46-00d0f800d6f9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-850d83aa-c948-4c19-8748-d1ca299afb50.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-8cbf4eac-56d3-4801-b68b-9ce005bcb88f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-8e045786-72ca-40f7-a56a-d462e9f3d527.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-966027c5-699b-4360-9abe-39b37daf83e0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-a2efe9f5-ab45-447f-9925-3ba73f41562d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-c8df45cb-a9e8-492a-b87d-c82ce2c3603a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-d5b9ce5a-fcaa-4196-9b30-c728d02e58a0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-ef631551-c994-4c56-ae6f-8bca473da037.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1139795b-6469-4340-957e-3c927b7fcaac\workbook-fe5699bd-4de8-4b14-a187-feb3ed732f6f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-1411172a-297d-4aeb-8e20-5ebf1d3ce174\workbook-6bdc2cee-cde3-45a1-817d-54cf169ac7d7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-244e6c16-31df-4817-a840-9ec28eb7fa34\workbook-78ee8c9d-8547-4771-bb79-a71468691f8d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-244e6c16-31df-4817-a840-9ec28eb7fa34\workbook-c5e62dad-675e-41a0-a862-a01866645cc3.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-099065bf-9293-4efa-a657-faab5117ecb6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-1218255e-e320-414a-b62d-0b4c5602544e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-1299bed2-3bca-49e5-90c3-5fb6a4704f53.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-14d22046-25a2-4af0-b4b1-ccfb85675299.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-161a996b-d272-4f01-b3d0-dbd13425e4bf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-194e5372-8e6e-4761-855f-13742ce43b44.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-3012327b-9c12-447c-8c61-b58e5e9b87fd.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-34b5e44e-97a9-4e79-9b11-179c5d93fb9b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-510ae1b9-3f0d-4f8b-a907-feaf135ea52e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-63c7b1ca-2e1f-493b-9278-0ba1c0d989c0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-73ca06c7-1625-4388-956e-be9a64e9a01f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-78fc37ab-480a-4b38-8d08-3ff7a308a32d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-8d297665-b499-4b8c-bf87-2925b1c6eff7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-9726dacb-2584-4374-a4ab-a853f009ebc1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-b69bbe54-cabc-43c2-add1-9ee4076f9a4c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-ca0b2648-ae7c-453d-9496-42c88d62ec29.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-d5d6610e-a4a3-44a6-91b9-6d280eb04a6e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-df8569ad-d85c-4d35-9f37-28a39934ef45.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-f5362682-1dfb-4ef4-b3ab-8c2e6c93f126.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-65968f15-7555-42df-a031-3f3a808054c0\workbook-f976be8b-57d5-4a03-a5b5-2aa3273d35e2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-01674bee-f0e1-4dfb-848e-40fa882be2d9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-0a7f848f-1088-4e15-bac6-a930ac5cff07.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-0c46e170-97b4-431f-902d-678995c72ec4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-153b7a3b-724f-441d-a154-19ce8e84b5a5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-1d0150f5-e39b-448b-bc20-6971161916c6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-2f2b0f9f-ac79-4bd3-8212-c8d0ac770f0f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-3493336e-0da2-4c0a-992a-01c6c85db87e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-5cce844c-df73-4d8e-937e-f7fb22293334.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-601e1831-deaa-40ef-92a8-b308f427ea37.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-6193cf48-dd8b-49ec-b2e8-f3e1b06b3db5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-629e001a-ab62-4a14-9feb-611fa1fc8c3a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-6942e7e3-3845-457f-934a-0db3692f7ddb.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-73fa88b4-7b63-452b-884e-e188c3d6aa9e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-7eaa4579-2d1c-485c-adac-9af1f324609f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-8834f45d-46e0-489b-9742-e7338d2ae141.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-929391ab-9b4b-4277-93ee-dd97fcdb0d89.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-9f57a34e-1669-4a88-bf8d-bc0646da57c2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-ad9c09ae-2b80-4b52-96f6-60f60192e80a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-b28661a9-674b-4d27-bb51-604d452b888e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-b366098c-9962-4163-abfa-d0d8f86ec41a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-b5819436-4e79-44e0-8748-e59a85dbaa10.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-b886a75b-bfae-4ba2-bf84-04d34699899e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-cc26ba3c-6a28-4779-8a64-34513423ac27.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-ce76974b-5d6a-4d2c-af54-241661198b38.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-d01f9322-5a54-4dc0-8ffe-a22d6e27ac51.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-6e35f12c-c2f3-4e41-92eb-fbd045284fe8\workbook-d9396522-d150-409f-bdf9-1fca4e2a68b6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-08d6fde7-56d8-479d-aaf7-7acf1377ab6d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-0b57a578-3ac8-4508-a9c8-74af769399b4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-13c79725-4f9b-4b5a-89e9-1895b855e9b0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-1b2e8fba-313f-4702-a38a-5f2b25be8c6c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-245e13ed-e90e-4d15-9a46-ff8e4f464013.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-2c1be86c-63bf-49ad-aec7-8de075545fdd.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-2cc4278a-2d45-4174-aaa3-42f5c25d4ff8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-37bf8e41-c40a-4a87-a218-f20af295f400.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-3b4bb037-ac34-4e7a-b9fe-32f8317767db.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-3b4cb1de-0b9e-4711-92ce-e8a8d4897149.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-3f83ed27-a224-46e6-9d14-7d6629496aee.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-3fca5db7-dcac-43a2-8cfc-3a116422ad4c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-42895e99-d766-4764-8ec2-abace4b3fdbe.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-4d4c748b-c7bb-49b4-95e4-223b2d42ecaa.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-5174a599-5a5d-465c-b96e-8aad742e2bbc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-529e9035-793b-4df8-a2f0-e458380c494b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-5dcf922c-11dd-4fb4-a4e6-a16e513afd70.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-63367245-9524-4087-beb6-f81c4f281eb6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-6528c8ad-ec6d-430a-bef4-0c3a3964ad78.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-6641554f-7c5b-45df-a2b0-b58003fb17c0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-6ff92b72-77bf-49c2-a14d-fa16adf594a3.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-753de6a7-5a9b-4b07-b6c5-6ec75ed0156d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-75b7969e-3469-4995-9d2a-732d0254aac8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-7815e48e-0fae-41be-8a75-6649d36a2e50.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-8c2f94a0-9405-49d7-ad3e-2616cd6d7020.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-8da10f0e-6b25-4b0d-afb8-b1f0ee759146.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-923de054-0274-442a-99c7-41fdcc81b7b2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-92656984-dab8-4b8d-92b4-506c365bab6f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-9bf82072-9c2a-4183-9c8a-22eb22d3e07d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-a0559e14-3469-4c2b-8ce3-35a31d6fae19.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-a24e9fb8-a3b6-468a-aa79-20dc2e211e5d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-a4862dd7-c0c2-4cad-b64c-85f32df7bf3b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-ace62342-1b85-4301-b18c-dd37b6aadda7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-b06234cf-41b1-4c7a-97c5-3c4adf9e9fab.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-b9325108-79ac-497a-9787-31b37e6357d7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-ba3b062d-6738-4b31-ad38-9136fd2a59f2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-c0f142d7-4da7-45c4-a346-4727a84a15d4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-c27fe7be-317c-44b8-b070-cebcb6d5ae23.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-cf06768c-a0d9-4bf0-849d-82d87502d51c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-cfa4bc86-e25f-4812-91bb-6cced9daea66.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-d1b3fb2c-3dfb-4d11-a0b5-492a0f776cbd.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-d22be206-1edc-4c1d-ac98-fec2a8bdb77f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-dbbece61-f83c-473c-baaf-d38432157fea.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-e2011117-8bc5-4696-807f-fa580b8ae5df.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-e7ba56a4-3537-4780-9b39-55bb16292dfd.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-eb88cf79-fa02-47fb-903f-3ce92c397a0e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-f29dacaa-4893-4228-b706-81229542a375.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-f43a99a8-29dc-4d73-9ea0-0e0f241b59c2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7114f82e-50dc-4ef5-bd21-8803bbd2afd5\workbook-febc1b07-1a08-440c-8ac9-303fc7b4e414.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-00a914bf-9265-42fc-8efa-944af1c4ca0c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-024f8588-5321-4ab2-acad-021a11d1f9c1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-072f30b2-d932-4093-bce7-6696d8c0d769.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-08511357-3fbe-493d-bbc3-f5e607a8f897.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-0bbe9bdb-3cce-4ea0-8352-89a7a8739a53.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-1943d687-f7cd-454e-a0ca-3cf849b5a49e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-1a46cf83-47e8-40d8-8f7d-0ee7a60612d9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-1b1da7f3-f9ab-4827-a196-321608c2b370.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-27458a47-326c-4179-8f0e-b6259dc8a4b4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-277ae9f8-b1ae-4258-baef-f5779989b2b2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-2ec1267d-b8a4-4323-9afb-39c55064ec90.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-33ecf482-a6ba-46d0-b20b-881ef3bc64ed.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-352426ca-ded2-4456-9569-88768a328dbf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-39c42576-de4c-4026-81c1-ecd4a5b88605.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-3afbfdae-4ff4-493e-a7aa-a9ab96b66e19.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-3c33f1fe-2188-46b0-ac44-0ad7bec33650.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-3f5242cd-7d1f-4243-9f4b-924c5fd8bb09.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4b4b5592-9f9f-47bc-82db-82a378a9f54c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4b7dd224-4370-4f2c-a977-ffdb81c2c5cb.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4d01ba8a-0aee-4765-a4be-a63c4fc4b724.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4de27b50-e657-478c-b415-0f9babfb9123.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4de9cd85-ec80-49d1-ac1b-12bd8bdfedfc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-4dfbddfc-5d49-4e35-9f68-9f01fe0d7f67.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-5c066220-3fe2-4e5a-a67d-b9ce3a9f6475.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-5de46937-4a2d-410d-b698-ec5ea35dd9f1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-5e176044-6e10-46ee-8b26-b184b6a0b6cf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-66e2a358-aa32-44a1-ab8c-743ff48029de.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-67352acd-ae1b-4d35-ac0c-ed8461789b8d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-718655e1-5643-4f2b-93a7-a7ade4e009ac.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-7667259a-f533-495b-9008-85b01af5153d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-76f88193-6764-4480-b1cd-65df77818df4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-7719fb46-bc65-4a43-913d-f7cfdebf6d3a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-779c760d-84ec-481e-90b2-b439d87a9825.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-79396862-37cc-48d8-b80f-a9a9fe8a93c8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-857328ca-a5f8-461a-9619-4780233a1f23.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-8d6b4e22-816e-420a-9de4-b15a0e593059.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-8e800227-75e4-4fde-aa30-b4d9a7a0d9e8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-8ecbd197-5253-479d-9bd0-311d3532ccb1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-91165cbb-d4e3-44d0-93fe-82208a4f6631.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-994065f7-d6c4-44e1-acfb-ca1073f29113.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-9ac7f880-8d3b-4fd0-8891-31079ca1a819.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-9b27d1b7-c752-4035-bfda-768307406d81.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-9c9e9416-4636-4dc3-b2bd-498d71376671.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-9f380516-0c20-4c59-81c1-21b78c4b4e41.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ac43784a-de90-4e41-9c91-35b0cadee4cc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-b0d536a0-839a-46cd-9d7c-42fca46f9279.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-bc636c5c-21ba-438b-89cc-e6cb24186879.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-bda52f75-bc0a-42b3-a3db-f44ab9f0a15e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-c4f64db4-5e56-4605-9eee-465eba3b990f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ca4766dd-2da4-402d-a70c-0dd99d430abf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-cd47b6a5-a16b-4cc2-b20d-b350615bb3d7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-e596c40b-bee7-4196-8be6-d83f0ab632bb.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-e73f2d01-ade0-4c97-b15d-152c0128d073.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-e9d64535-b958-4b3d-91f9-f4b08210f243.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ea730269-6c1c-46bc-a5a3-0abbeb13884a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-eb6af18a-6767-4c17-8eed-357c0987c5dc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ec052fa5-a0a4-4a6c-9993-4e9cbedf7dc0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ece13933-c9e9-4234-8751-e79e27dbd979.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-f2d1bfac-b241-40a5-9e11-76350812d4e8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-fde90919-f0a5-4cf2-9b4a-0df107461b5b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-fe663422-b8a7-49b1-975e-dd3c289c4148.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-7485d94e-3e43-41cf-b23d-251e48440e8d\workbook-ff41a9bc-41f7-4936-912a-3541f3cd4393.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-1eae6aba-fd37-4878-8e3b-8e3f03018226.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-68a2b8cd-ad5c-4a73-becb-dc3b44e07faf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-b76e9bc1-3bb7-499e-8550-f9019b8e1153.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-c12ef717-fccb-4754-b3e7-495c69e5787f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-dfc973bc-2093-42bf-b54d-e8229f85b96d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-877a30d4-2d75-41bb-bcbd-2a712cfe1244\workbook-e89c1a51-6302-41e2-aeb5-c8b64c155532.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-1b09cd57-1a18-4190-9068-e007d72b4307.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-3f837ff1-4689-4d78-84ef-22f9af0712ba.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-50cb350c-6f00-4563-8f0f-988c06a51a04.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-746989b2-5245-4acd-84e2-2bfa573c4619.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-784706b2-e7a8-4369-a461-c46f820af60e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-7a5be1cd-c8c8-4787-9d20-c42fdf1770e2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-b26f7006-a48f-4fdf-81ef-3887b586d7a0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-ba8df9e8-1095-4aa6-835a-ee68f6496b8f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-8c6a5170-1c8a-406a-96a7-63e65d41b62f\workbook-bd21434a-972e-48df-bb71-4d115080f775.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-92db343f-98c8-4f58-85c4-25a9d2801e94\workbook-259a7273-ffac-4926-a0da-9915402ed12f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-92db343f-98c8-4f58-85c4-25a9d2801e94\workbook-277319eb-acb6-4077-9331-db93366766b5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-92db343f-98c8-4f58-85c4-25a9d2801e94\workbook-63046a49-2c84-4dc0-999b-3c211d9fbfc5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-a78f4864-85f2-4680-aa2a-bf7892124cdd\workbook-2aff256d-3545-4962-b2b6-a2829b7f4dc9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-299257e3-a21f-44cb-9c91-78eef02d39b6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-3b3477f7-2f3f-4c53-a771-e7480a2ca060.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-423eafd8-5bdd-480a-bf35-13926bee637f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-4712ee48-80bc-49e8-a996-0ccb8d0f3571.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-7929e00f-8ef9-46ba-9c91-e6d970eaee3d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b1df7511-e8bf-4360-ab0d-fc72c8e671e2\workbook-8c4d9188-3b80-4a20-98d7-6f07b57cd2d8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-013c21f7-9b4a-48f0-9243-462a943e9744.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-021739c4-c35e-4092-970b-476ce05d3464.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-09096576-ad07-4fa7-8889-45b0bfa1c234.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-0b923a2b-35df-4919-afcb-61b3a1f93919.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-1136b387-6b68-4a94-b430-e1dcd760b8ba.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-12f21211-15c6-4c3e-8bc4-dd5c541d27b1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-1c86b132-fc0e-4cfd-8be5-5e005d6060da.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-1ed9b76c-09d9-4e44-91f0-53aa801fa99b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-290165bb-689a-439a-8ee9-a1d6865591d5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-30423b37-6730-4fc3-95f8-ae6cab8ee1d5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-33b07d5d-1ded-433d-961c-ac68de4fa820.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-3a621440-8b2f-45fa-b050-958e6d92105f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-3bc07137-3820-4c50-a152-e085bcb23830.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-3de82a41-b6cf-4573-8354-32b95c9b6d4d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-57620028-a00f-42a3-9006-868f2cd552d1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-58cb4826-bf60-465f-8e66-847e9e392d3d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-5a9f7490-affa-48de-a961-b8e56c56408d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-639278ed-b95f-44d8-ae03-b90ecd7a4a75.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-6a2ad181-5645-4436-ba14-b17a325ce3c6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-71a43c96-ec82-421d-8494-fd29eafaf1e2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-76b12a0d-1499-43b6-8bbf-7ac90853dfc7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-8939df5b-44c5-43b5-b81d-3e47c80d03c7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-9f587f68-d502-4731-bfd0-8e1d4e403c34.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-a18d374d-6ab6-416d-bff8-3b8bf7b1ff10.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-ad7534ee-64fe-49bc-94db-09e014e1bb57.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-b4fc6c32-9b3e-4db2-96d6-7e3241747c8a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-c130af66-9a63-4b96-bef5-25216f14aaec.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-c3360bf4-43ee-458c-a385-6d8d19f7ecbc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-c5b5211a-fd46-4b68-be08-bbbcfe2034af.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-c6fac4fa-b008-4d9f-8d2f-0cd553ebaf7a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-c7f2ec1c-989d-4190-8490-cc5355329b72.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-da63df10-01c1-45b8-959f-6504ca9dfdb5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-e035052a-dd3b-4d67-9d98-47424fcdc488.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-e6e327c8-1436-43f5-afc5-6a812dffc954.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-fc1e79af-138d-454f-b82e-abb1c6189c92.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-fce552c4-bab9-4bbb-8a7a-19cb8863a29c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-fd1d361b-1625-4120-b654-a77671f8640c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b2f6563f-f75c-45f0-a627-d3e799521966\workbook-ffc6859d-2d2d-4f4f-84a1-efa392bcf8db.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-010957a1-b5f1-4913-892c-a75b0cd872ab.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-0a28a02e-52a0-482a-b724-71776bf86759.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-0e064826-51d4-499c-931b-f9e9540a62e7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-10937330-2121-46fd-beb1-0daf1f8a8e84.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-24b7fc55-12f8-416d-8a15-f5cfac900f08.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-2665e7e7-71d1-40ed-8a04-c2894bb448b6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-35e8b944-c847-473a-8475-944f12a65464.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-439eb07d-539b-4e77-a55a-a60c21f48e27.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-480608f5-a948-45bf-84d8-cc22989ff4a5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-496e7c29-9de4-4d87-bcf6-b7747b1df800.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-5955263b-1792-4497-ae24-7227698334eb.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-5bb41153-4c13-42f5-92fc-67540f7440a6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-61e39b61-0cbb-427a-a17c-d33996002644.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-662a9986-d3dc-4640-bd09-c82e4aa13020.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-698d40fe-4399-4b93-bef9-44b8b790a031.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-7de18fd9-dd6f-44d0-a008-d1c77330e3b9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-86c2e8f9-0a8d-4491-9637-748a41d1336c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-8cc142ec-59f8-4a89-b81b-6d44012ae59c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-8d244598-095c-44b4-a04a-5228719ce232.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-8f196872-26d5-47d9-a821-1ddd5b7fc90f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-973c9834-6024-4696-8bc3-e0cdba0021d5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-a574f53f-69b4-4557-afe4-d542861df5b9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-a8b54017-9927-45d8-b04d-e52cd48234d6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-aa5a62d3-0841-47a6-8a73-9ba9bd5b3109.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-b0b4e388-018a-44d2-b25e-22bdbb334332.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-b77ce549-3191-4c3b-8008-8cfcd3e09dd7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-c26a3292-5d8d-40e8-8c79-f30e7a52fef4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-c3c376b4-47ef-42d8-8808-0c166d08b6a9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-cd316377-404f-4b98-8ff8-3eed7a06220f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-cd63ebbe-9ae7-40d1-a568-057678320cb6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-d030db8b-48f6-437c-a861-daf3bb0bdd1c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-ec78a03c-1ebd-457b-9b89-c57dca9c19b4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-f257a114-c8b9-403e-8905-4c17ca81d718.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-b4126fe9-d7ee-4083-88f9-a5eea1f40416\workbook-f851b760-1779-4f30-a15f-a723a1f75e68.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-3add9a81-da49-401d-8e65-cb93cf65680d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-3f2db7d9-5c04-41f0-a28c-1c4b82c62769.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-5a53cb3a-1f67-4ede-a2c3-9bb6429a6092.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-a4678891-363d-4dad-b6b6-f98881da78b2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-b3f3f85b-b39b-4119-8e75-325391a17977.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-f221698f-2b37-4342-9854-7184f1c97c0f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-bf2aa687-31aa-46c2-a439-ce6cf2c4659f\workbook-f4b5c754-428f-46ee-b4d6-cafef6efaf62.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-02e2c9b5-0a37-4287-8aed-dc8747600f57.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-098e81fc-bc94-4939-b6d4-6454957c8c87.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-0baf66bd-1adf-489a-8600-7386bc409245.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-143674f0-9ad7-4824-9346-96cbeb21bd7a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-18da67a8-2a86-4db6-9b6a-4b5210940aac.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-1f08ef2e-316d-4210-8d57-a68ce62f9585.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-283021c6-5388-400b-a2f5-eb62010450c3.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-31a8ea67-d894-4e8d-b654-906b282191a4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-3353ef63-f69f-43d1-ba39-cb4679ddb773.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-34bcc18b-b6b9-4761-ab8d-a1aff1f1b6f6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-38daf7aa-1aed-4898-ab2f-574d714aa445.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-45dc0d8a-8930-48e2-a077-3e81ea1dc207.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-4b587d4b-edd5-4ce0-a965-5e6775619cd5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-6cc7675e-b42e-4f61-9fc4-052077974c63.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-7282ee6b-d85d-4c52-9043-ebeee67315b9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-850ee1b0-97d7-4a4e-9d53-84fd854e9398.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-87a1b946-e311-491f-9103-7d740df5231d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-8923c6dc-2ddb-45a3-b61b-cdad2758b7f4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-a700d562-9b21-4969-8855-2a7f6843f56b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-bba38348-ba7a-4b9b-9631-109dbedb4208.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-dcf7db21-db0d-419e-828b-d8813aa5889b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-e6c2da66-4372-4bd3-819b-c0b2529f69f2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-f1a7924f-2954-483a-a272-7ef6e275866d.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-f5d13332-b79c-4451-af20-c3ac76484e0e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-c841df1a-1189-4ce9-8e18-8c0b81db7c45\workbook-fdf818c0-b6ea-4ba5-855f-44926c24be34.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-02b9cf82-a78e-4b98-81ad-644ff79418c6.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-0597c416-8e1f-4ed0-bfb6-a9fbff83f176.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-0a14ace9-b68c-47d2-b34c-f94138d687cf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-0b018b71-5b4c-4323-8615-7d2d4dece3ec.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-0e1265fe-7b0b-4ad1-b4e1-833d0df944d2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-11fd79d7-5192-45ad-940c-da5ebec90a97.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-13892c23-5d13-42de-bebb-b07b09e6ad66.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-18ed6729-9e9b-4fad-8e6a-5dddadd81d81.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-1a72af91-f1ae-4c9a-babd-4dae7e187f74.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-269f3012-55f9-4359-9bad-0fc28ebf86ba.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-2e5e4703-6587-4f33-9b94-b47b3bd58aed.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-31e72e94-284c-47f3-9624-7d403e820699.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-32ce51d8-4183-42ee-827e-a89f333bf05b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-3464570e-2606-4d8a-8c78-70b161b649df.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-35c1a013-28c4-4d3a-8b9f-643194f4ddb5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-374d26e9-c200-44d4-9989-6edc779e4020.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-39e27919-12d5-4241-985a-0854f5d0b050.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-3d67bf44-60ae-4adb-a770-0b5f52707cca.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-40d1c7b0-d98d-40ef-817b-657d1de7427b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-41eadcb0-5f3a-414c-89a6-0c298f586956.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-43fb1044-0e90-4dc6-819c-2d045b18ad14.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-4434c60d-3553-42e4-8767-c1b729d3cef0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-49da5121-49b7-4690-980c-c62a9d4de566.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-4be82d27-66b5-483f-9f47-354e0f5c26dd.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-4c75c669-7443-4683-ab4b-f43b0d0ca655.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-4dbec138-7bf4-43b6-a195-573251155ebf.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-4f4977e5-d88e-4478-9dbf-211cbf97eb11.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-5024ae59-d3c6-457a-aed4-93ad75566851.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-50e589f7-00f3-452f-962e-9efcd4acbf21.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-54563973-af07-4cdc-8777-ed7ec9cccd78.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-575b676f-eee5-488e-aa06-16d527aa5929.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-5a923254-641e-4639-b061-58795b69497a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-5ec2e7bf-0609-4ce4-b8e4-8d0e30f37281.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-605a6012-9094-4bfe-bb14-2e54492c4058.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-6093e766-4b7e-4028-becc-8d1de96bf15f.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-70a02fa7-8457-453a-a0b4-6814309dfee2.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-7506a0ba-23d4-478a-9576-5dc8ba846362.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-75c3269a-bb22-48b6-a1e9-dc74fe9d52f1.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-76c056b3-5fe4-4171-adfe-b035a695877e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-781e007f-8a5e-4842-b31d-e6da0910a756.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-7afa58de-7a7e-47a4-802c-24f5f64dd866.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-7e52b43b-0748-4b84-9f81-ab8c21552c07.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-807ba13a-4944-4f03-97ab-ef49f330d6cb.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-811aa22b-82fc-4ce1-9737-09e15d8d541c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-86f5fbe2-5331-4b71-9546-fde4de0e5a1b.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-8770048f-c08c-48c3-a05f-8e831d1460cc.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-8882a906-5f31-4e59-9950-269775eb468a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-891733c4-b0fc-49dc-8997-ac1146254351.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-90d9ef42-1f9f-4cf4-a417-8b064738d8c3.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-92f40f3d-a474-4193-82fa-827cbd06eaa8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-933f27c0-c8b7-4f72-9a2a-9a10162a23a9.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-95b75930-8dbb-40b8-b0c0-e2c20ab4ac72.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-9bc328fc-ecc1-4b51-ac84-c67006860d92.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-a53d72c9-258f-40d2-8c1e-735cd6f18e3c.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-aa805d38-2889-475a-bce8-a716449ab771.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-aa876fbc-80dc-4872-9387-1dcf34870518.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-aecc3787-72af-4745-b420-6c10098f46ba.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-af96a81e-8b23-4dee-a457-85fdf1dba180.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-b622062f-6941-47de-b5fb-c9381a3847a4.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-b87c829e-fef2-4c31-a498-a63ee7c297fa.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-be64850e-942a-4fc9-84c5-bd9d0e57af3a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-c0b133bb-0f98-40b2-ba70-89e6095a385e.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-c54498fb-a14c-414d-b278-c355ae7157e8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-cb489884-631b-4d0a-b59f-4576d1520c60.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-cc72d806-7a38-459a-a392-663ea5463ad5.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-cd19a242-2910-4e97-98f9-5797ad5bc991.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-cd563cc6-bb67-4cda-a3ce-440a87c1d649.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-d1652bc0-0e3d-4766-82d8-4a6777da0546.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-deabeaf0-7e29-4647-83e5-7cacc5cdf2a0.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-e0c7d3c6-2742-4c32-b001-5e96aee55d90.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-e232d627-02a2-4b7d-8fc0-6bb9129f8a25.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-e674cd00-2894-4fd4-83f3-3799f37a80be.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-e7b9117f-8efb-42d8-b8e4-50e3aa684ee7.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-e8bceccc-6763-41bc-96f5-7b72a1f32695.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-eaf54ce3-6daa-42db-ad13-d7d2f560e358.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-ed46f66b-86b2-4cfd-a28a-48684ea2cd90.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-f1522dc1-94d1-4f31-bdf8-3d6e17f967b8.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-f1b68e02-465d-4226-8e18-cad6d6073fc3.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-f2bd27b0-9447-403d-878a-4432ae7fd54a.png" />
+    <Content Include="Content\Images\WorkbookPreviewImages\site-d02af942-a153-43aa-8f1c-d7b3346e527f\workbook-fd6420aa-9415-4756-bb44-8af1c7c7b907.png" />
+    <Content Include="Content\jquery.contextMenu.css" />
+    <Content Include="Content\jquery.contextMenu.min.css" />
+    <Content Include="Content\manifest.appcache" />
+    <Content Include="Content\signin.css" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Errors\BlankFile.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\font\context-menu-icons.woff2" />
+    <Content Include="Content\font\context-menu-icons.woff" />
+    <Content Include="Content\font\context-menu-icons.ttf" />
+    <Content Include="Content\font\context-menu-icons.eot" />
+    <Content Include="Content\jquery.contextMenu.min.css.map" />
+    <Content Include="fonts\context-menu-icons.eot" />
+    <Content Include="fonts\context-menu-icons.ttf" />
+    <Content Include="fonts\context-menu-icons.woff" />
+    <Content Include="fonts\context-menu-icons.woff2" />
+    <Content Include="Content\fonts\context-menu-icons.eot" />
+    <Content Include="Content\fonts\context-menu-icons.ttf" />
+    <Content Include="Content\fonts\context-menu-icons.woff" />
+    <Content Include="Content\fonts\context-menu-icons.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\1a290bb18556efbf6d496f03e1f80b5f.png" />
+    <Content Include="Scripts\89889688147bd7575d6327160d64e760.svg" />
+    <Content Include="Scripts\912ec66d7572ff821749319396470bde.svg" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\app.js.map" />
+    <Content Include="Scripts\e97752e2f3905de728a558cb80e25fe4.gif" />
+    <Content Include="Scripts\tableau-2.1.1.js" />
+    <Content Include="Scripts\tableau-2.js" />
+    <Content Include="Scripts\vendor-manifest.json" />
+    <Content Include="Scripts\vendor.css" />
+    <Content Include="Scripts\vendor.js" />
+    <None Include="Properties\PublishProfiles\Ibnoon.pubxml" />
+    <Content Include="Resources\ExportOutput\PPT\BlankFile.txt" />
+    <Content Include="Resources\Templates\PPT\BlankFile.txt" />
+    <Content Include="Resources\Templates\PPT\PresentationTemplate.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Signin.cshtml" />
+    <Content Include="Views\Home\Index_old.cshtml" />
+    <Content Include="Views\Shared\_FullNav.cshtml" />
+    <Content Include="Views\Shared\_Layout_old.cshtml" />
+    <Content Include="Views\Account\SelectSite.cshtml" />
+    <Content Include="Views\Home\RefreshCache.cshtml" />
+    <Content Include="Views\Shared\_Layout_old_v2.cshtml" />
+    <Content Include="Views\Home\Index_old_v2.cshtml" />
+    <Content Include="Scripts\674f50d287a8c48dc19ba404d20fe713.eot" />
+    <Content Include="Scripts\b06871f281fee6b241d60582ae9369b9.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tableau_Wrapper.Services.Models\Tableau_Wrapper.Services.Models.csproj">
+      <Project>{0bba6fef-f8f1-4c4a-8b6a-7afa12180a1e}</Project>
+      <Name>Tableau_Wrapper.Services.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tableau_Wrapper.Services\Tableau_Wrapper.Services.csproj">
+      <Project>{ab48f31b-30f7-4d10-80bc-3314e4622acb}</Project>
+      <Name>Tableau_Wrapper.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38391</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:38391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

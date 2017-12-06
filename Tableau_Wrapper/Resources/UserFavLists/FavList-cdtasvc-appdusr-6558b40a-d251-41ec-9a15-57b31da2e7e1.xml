@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<favlists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" userid="6558b40a-d251-41ec-9a15-57b31da2e7e1" username="cdtasvc-appdusr">
+  <sites>
+    <site id="b1df7511-e8bf-4360-ab0d-fc72c8e671e2">
+      <workbooks>
+        <workbook id="299257e3-a21f-44cb-9c91-78eef02d39b6" />
+        <workbook id="4712ee48-80bc-49e8-a996-0ccb8d0f3571" />
+        <workbook id="3b3477f7-2f3f-4c53-a771-e7480a2ca060" />
+      </workbooks>
+    </site>
+  </sites>
+</favlists>

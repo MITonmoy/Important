@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+@*<html manifest="@Url.Action("GetCacheManifest", "Home")">*@
+@*<html manifest="@Url.Content("~/Content/manifest.appcache")">*@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Tableau Wrapper</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/Scripts/vendor.css" asp-append-version="true" />
+</head>
+<body class="flexdisp flexdir-column flexalgnitems-strech">
+    @RenderBody()
+
+    <script type="text/javascript" lang="en">
+        var baseUrl = '@Url.Content("~/")'
+    </script>
+
+    <script src="~/Scripts/tableau-2.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

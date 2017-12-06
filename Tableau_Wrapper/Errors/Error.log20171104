@@ -1,0 +1,862 @@
+-----------------------------------------------------------------
+     2017-11-04 08:15:43,058 [506] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController (ERROR) - User token not found. Redirecting to Signin page.
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:43,063 [520] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/robots.txt
+System.Web.HttpException (0x80004005): The controller for path '/robots.txt' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:15:46,791 [502] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:15:49,467 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from AccountValidator - Validating credentials of domain: internal.imsglobal.com, username: MIbnoon with password: TonM@08766oy
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:50,712 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Login validation succeded for Username: MIbnoon using Password: TonM@08766oy.
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:50,716 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Redirecting to /Account/SelectSite.
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:51,350 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Rendering site selection page with 4 sites.
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:53,497 [518] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:15:54,554 [510] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:15:56,260 [518] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Signing in to MMAGold
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:56,268 [518] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Token not found for user MIbnoon. Going with sign in API method.
+
+-----------------------------------------------------------------
+     2017-11-04 08:15:57,226 [518] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:16:04,696 [518] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Setting session values.
+Username: MIbnoon
+TableauUserId: edb549f7-b790-4657-b062-5cda4615dbf6
+TableauToken: Ej4oIrC6QoaNTwukObqTqw|iyVaB2xtUFcVjAFfWvkBa6VgqPfgIcDm
+TableauSiteId: d02af942-a153-43aa-8f1c-d7b3346e527f
+TableauSiteName: MMAGold
+TrustedToken: -1
+
+-----------------------------------------------------------------
+     2017-11-04 08:16:04,757 [506] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:16:16,890 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:16:16,907 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:16:16,912 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:19:37,263 [518] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:19:40,399 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:19:40,437 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:19:40,442 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:20:49,372 [520] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:20:52,101 [520] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:20:52,194 [520] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:20:52,230 [520] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:21:05,717 [395] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:21:08,108 [398] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:21:08,135 [398] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:21:08,152 [398] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:23:27,393 [502] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:23:31,394 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:23:33,337 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:23:33,368 [510] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:37:23,457 [505] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:37:26,550 [501] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:37:26,584 [501] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:37:26,594 [501] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:38:36,784 [493] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:38:38,112 [492] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:38:38,130 [492] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:38:38,135 [492] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:39:21,015 [493] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:39:22,612 [494] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:39:22,624 [494] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:39:22,630 [494] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:44:36,847 [512] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:44:38,337 [509] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:44:38,401 [509] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:44:38,425 [509] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:17,873 [12] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/robots.txt
+System.Web.HttpException (0x80004005): The controller for path '/robots.txt' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:17,922 [13] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController (ERROR) - User token not found. Redirecting to Signin page.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:17,948 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController (ERROR) - User token not found. Redirecting to Signin page.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:17,982 [12] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/robots.txt
+System.Web.HttpException (0x80004005): The controller for path '/robots.txt' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:21,476 [14] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:22,288 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:23,517 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from AccountValidator - Validating credentials of domain: internal.imsglobal.com, username: MIbnoon with password: TonM@08766oy
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:25,061 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Login validation succeded for Username: MIbnoon using Password: TonM@08766oy.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:25,075 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Redirecting to /Account/SelectSite.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:26,829 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:27,930 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SitesHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: sites
+authToken: EyieQap_R32Y9cF-OYPm6g|eifTyaVIx6OtvTF4dJ8h9cTQyjESvz6G
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:28,434 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:29,199 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:29,212 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:29,900 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Amgen" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:29,908 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:30,592 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="RWES" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:30,600 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:31,286 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="MMSTest" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:31,289 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:31,986 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Test" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:31,997 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:32,757 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:33,529 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:34,244 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="CUSTOMFIAFFTesting" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:34,257 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:34,945 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="SiteAutomationTesting" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:34,965 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:35,719 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="NovartisAlcon" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:35,724 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:36,413 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="SiteForTestingImpExp" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:36,425 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:37,139 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:37,808 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Sunovion" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:37,829 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:38,508 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Supernus" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:38,514 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:39,180 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Xenoport_1" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:39,189 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:39,855 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="MMAANALYZER" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:39,865 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:40,539 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="PortfolioDemo" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:40,546 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:41,187 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="PursuitSoln" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:41,194 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:41,841 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="DEV-SupplierAdvancedAnalytics" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:41,847 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:42,510 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Opus" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:42,521 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:43,176 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:43,822 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController (ERROR) - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+requestXml: <tsRequest><credentials name="MIbnoon" password="TonM@08766oy"><site contentUrl="Hadoop_Ops" /></credentials></tsRequest>
+authToken: 
+errorResponse: ErrorDetails: Code: 401001
+Summary: Signin Error
+Details: /*NULL*/
+HttpStatusCode: Unauthorized
+HttpStatusDescription: Unauthorized
+ExceptionDetails: System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tableau_Wrapper.Services.RequestHandlers.RequestHandlerBase`2.GetResponse(String serverAddress, String apiVersion, TReq requestObj, String authToken) in C:\Personal\Projects\MMA\RnD\PortalMvc_6\Tableau_Wrapper\Tableau_Wrapper.Services\RequestHandlers\RequestHandlerBase.cs:line 116
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:43,826 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Rendering site selection page with 4 sites.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:44,287 [13] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:44,863 [11] ERROR Tableau_Wrapper.Helpers.Logger [(null)] –
+     Unhandled exception caught on Application_Error. URL: http://localhost:38391/Scripts/home-index.js
+System.Web.HttpException (0x80004005): The controller for path '/Scripts/home-index.js' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-----------------------------------------------------------------
+     2017-11-04 08:46:46,075 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Signing in to MMAGold
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:46,079 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Token not found for user MIbnoon. Going with sign in API method.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:46,082 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - from TableauService - from SignInHandler - serverAddress: http://cdtssql353d:8000/
+apiVersion: 2.6
+apiMethod: auth/signin
+authToken: 
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:47,109 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     AccountController - Setting session values.
+Username: MIbnoon
+TableauUserId: edb549f7-b790-4657-b062-5cda4615dbf6
+TableauToken: 28G1KnsrR4--YmnnejYcSQ|u6o03LMoEZRXm7t6AxIIMph0oFI3Om4u
+TableauSiteId: d02af942-a153-43aa-8f1c-d7b3346e527f
+TableauSiteName: MMAGold
+TrustedToken: -1
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:47,135 [11] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:49,149 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:49,266 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:46:49,324 [14] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:56:54,567 [30] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:56:56,169 [41] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:56:56,178 [41] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:56:56,312 [41] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+
+-----------------------------------------------------------------
+     2017-11-04 08:57:57,478 [35] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     HomeController - User token found. Sending view.
+
+-----------------------------------------------------------------
+     2017-11-04 08:57:59,279 [37] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - User token found. Preparing to fetch left side menu data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:57:59,289 [37] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Left side menu data fetched. Delivering the view with data.
+
+-----------------------------------------------------------------
+     2017-11-04 08:57:59,297 [37] INFO  Tableau_Wrapper.Helpers.Logger [(null)] –
+     homeController - Top level menu enabled: true.
+

@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Refresh Cache";
+}
+
+<h2>The cache has been refreshed successfully. Redirecting to home page...</h2>
+
+<script type="text/javascript">
+    window.location = '@Url.Action("Index", "Home")'
+</script>

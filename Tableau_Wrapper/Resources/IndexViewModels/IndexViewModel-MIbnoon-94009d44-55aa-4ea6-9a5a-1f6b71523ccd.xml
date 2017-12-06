@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<IndexViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Categories>
+    <Category name="Favourites" includeall="false" includefavs="true">
+      <workbooks />
+    </Category>
+    <Category name="Uncategorized" includeall="true" includefavs="false">
+      <workbooks>
+        <workbook id="c5e62dad-675e-41a0-a862-a01866645cc3" name="Substitutions 1 2" contentUrl="32_Substitutions_1_2" showTabs="false" size="6" createdAt="2017-02-16T03:14:37Z" updatedAt="2017-02-16T03:15:01Z">
+          <project id="1f5e0554-2b00-44d8-b70f-7fcb8166bb6a" name="MM Analyzer" />
+          <owner id="2e96187f-1857-424e-b69d-7644eacd55c8" />
+          <tags />
+          <IsFavourite>false</IsFavourite>
+          <views>
+            <view id="5c6b6a90-7ebe-46ef-8258-237f0816d045" name="SubstitutedProductComparison" contentUrl="32_Substitutions_1_2/sheets/SubstitutedProductComparison" />
+            <view id="3b1abf64-c36c-4c0d-b16e-3b17c8f58ae2" name="Product" contentUrl="32_Substitutions_1_2/sheets/Product" />
+            <view id="989b3b8b-ee15-4301-a1b7-a9dd31bdb0d7" name="Product_To_Claim_Type" contentUrl="32_Substitutions_1_2/sheets/Product_To_Claim_Type" />
+            <view id="63abc913-f89d-4b5e-98b7-bc14a069ae50" name="Claim_Type" contentUrl="32_Substitutions_1_2/sheets/Claim_Type" />
+            <view id="b8f44093-088f-4fcd-892f-19ecb1066232" name="Claim_To_Sub_All" contentUrl="32_Substitutions_1_2/sheets/Claim_To_Sub_All" />
+            <view id="fe79efb5-c405-4ed4-98db-d3240dbe8943" name="Substitute_Product" contentUrl="32_Substitutions_1_2/sheets/Substitute_Product" />
+            <view id="b3404b13-e1eb-4207-ae20-c6856e3f3f06" name="Trend" contentUrl="32_Substitutions_1_2/sheets/Trend" />
+            <view id="be09b7e9-8dcc-4bdd-9292-4a858a33c671" name="Legend" contentUrl="32_Substitutions_1_2/sheets/Legend" />
+            <view id="2071598c-89a6-4b34-bbb8-188e712a0e16" name="Distinct_Products" contentUrl="32_Substitutions_1_2/sheets/Distinct_Products" />
+            <view id="ef7080a7-9810-4bc4-8696-90b05365f82d" name="Distinct_Substitute_Products" contentUrl="32_Substitutions_1_2/sheets/Distinct_Substitute_Products" />
+            <view id="c9a83b46-fc2f-46cb-8d84-c7f5752b0177" name="Filter_Display" contentUrl="32_Substitutions_1_2/sheets/Filter_Display" />
+            <view id="57d8fc11-3f05-4fa0-902d-bc037952f423" name="Information" contentUrl="32_Substitutions_1_2/sheets/Information" />
+          </views>
+        </workbook>
+        <workbook id="78ee8c9d-8547-4771-bb79-a71468691f8d" name="Demo Navigation" contentUrl="Demo_Navigation" showTabs="false" size="1" createdAt="2017-02-16T03:15:07Z" updatedAt="2017-02-16T03:15:15Z">
+          <project id="1f5e0554-2b00-44d8-b70f-7fcb8166bb6a" name="MM Analyzer" />
+          <owner id="2e96187f-1857-424e-b69d-7644eacd55c8" />
+          <tags />
+          <IsFavourite>false</IsFavourite>
+          <views>
+            <view id="d18d132d-eb19-42dd-944d-bea1305bb7fb" name="Navigation" contentUrl="Demo_Navigation/sheets/Navigation" />
+            <view id="eac0d2d6-57d5-440b-b69e-22e2cc8d160e" name="Thumbnails" contentUrl="Demo_Navigation/sheets/Thumbnails" />
+          </views>
+        </workbook>
+      </workbooks>
+    </Category>
+  </Categories>
+</IndexViewModel>

@@ -1,0 +1,160 @@
+﻿@using Tableau_Wrapper.Models;
+@model Tableau_Wrapper.Models.ViewModels.IndexViewModel
+
+@section navigation{
+    @Html.Partial("~/Views/Shared/_FullNav.cshtml")
+}
+
+@section customStyles{
+    <style>
+        .tab-content {
+            background-image: none !important;
+        }
+    </style>
+}
+
+@section ellipsisMenuItems{
+    <a class="list-group-item" style="cursor: pointer;"><i class="fa fa-user"></i> Your Profile</a>
+    <a class="list-group-item" style="cursor: pointer;"><i class="fa fa-search"></i> Search</a>
+    <a href="~/Account/SelectSite" class="list-group-item"><i class="fa fa-server"></i> Switch Site</a>
+    <a href="~/Account/Logout" class="list-group-item"><i class="fa fa-sign-out"></i> Sign Out</a>
+}
+
+@{
+    ViewData["Title"] = "Home";
+    var siteId = ViewData[AppConstants.TsSiteIdSessionKey] as string;
+    if (siteId == null)
+    {
+        siteId = string.Empty;
+    }
+
+    int horMenuViewsIdx = 0;
+    //bool treeViewMenu = bool.Parse(ViewData[AppConstants.TreeViewMenuSettingsKey] as string);
+    bool topLevelMenu = bool.Parse(ViewData[AppConstants.TopLevelMenuSettingsKey] as string);
+}
+
+@if (topLevelMenu)
+{
+    <div class="collapse navbar-collapse horizontal-menu">
+        <ul class="nav navbar-nav">
+        @foreach (var cat in Model.Categories.Select((p, i) => new { Item = p, Index = i }))
+        {
+            <li class="dropdown category @(cat.Index == 0? "active" : "") @(cat.Item.Name.ToLowerInvariant().StartsWith("favourite")? "fav" : "")">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@cat.Item.Name <b class="caret"></b></a>
+                <ul class="dropdown-menu categoryContent row">
+                    <li class="col-md-5 workbooks" style="color: #563d7c;">
+                    @foreach (var wrkbk in cat.Item.Workbooks.OrderByDescending(w => w.IsFavourite).ThenBy(w => w.Name).Select((w, i) => new { Item = w, Index = i }))
+                    {
+                        <a class="workbook @(wrkbk.Item.IsFavourite? "fav":"")" role="link" wid="@wrkbk.Item.Id">
+                            <i role="button" class="favtoggler fa @(wrkbk.Item.IsFavourite? "fa-star":"fa-star-o")"></i> @wrkbk.Item.Name
+                            <ul class="list-group hidden horViewList">
+                                @foreach (var view in wrkbk.Item.Views)
+                                {
+                                    <li class="list-group-item horView">
+                                        <span wrkid="@wrkbk.Item.Id" vid="@view.Id" tableauContentUrl="@view.ContentUrl" onclick="onVizViewClick($(this))">@view.Name.Replace('_', ' ')</span> <i class="fa fa-pencil-square-o" onclick="onEditNoteClickHor(event)"></i>
+                                        <p class="view-note hidden">@(view.Note == null ? string.Empty : view.Note)</p>
+                                    </li>
+                                }
+                            </ul>
+                            <span class="tooltiptext"><img src="~/Content/Images/WorkbookPreviewImages/site-@(siteId)/workbook-@(wrkbk.Item.Id).png" alt="No Preview Image Loaded" /></span>
+                        </a>
+                    }
+                    </li>
+                    <li class="col-md-7 horViews"></li>
+                </ul>
+            </li>
+        }
+        </ul>
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="row flexdisp content-wrapper">
+        @if (!topLevelMenu)
+        {
+        <div class="col-md-3 flexdisp flexdir-column sidebar-wrapper" id="sidebarmenu">
+            <div class="flexdisp flexdir-row searchbar">
+                <form>
+                    <div class="input-group">
+                        <input id="ViewSearch" type="text" class="form-control" placeholder="Search" style="height:34px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="pull-right expcolbtn">
+                    <button class="btn btn-default"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="sidebar-wrapper-menu">
+                <div class="panel-group" id="accordion">
+                    @foreach (var ctg in Model.Categories.Select((p, i) => new { Item = p, Index = i }))
+                    {
+                    <div class="panel panel-info category">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_@(ctg.Index)">@ctg.Item.Name</a>
+                            </h6>
+                        </div>
+                        <div id="collapse_@(ctg.Index)" class="panel-collapse collapse @(ctg.Index == 0? "in" : "" )">
+                            <div class="panel-body">
+                                <ul class="nav nav-stacked workbooks">
+                                    @foreach (var wrkbk in ctg.Item.Workbooks.OrderByDescending(w => w.IsFavourite).ThenBy(w => w.Name).Select((w, i) => new { Item = w, Index = i }))
+                                    {
+                                        <li class="workbook @((ctg.Index == 0 && wrkbk.Index == 0) ? "active" : "")" wid="@wrkbk.Item.Id">
+                                            <span class="workbooklink">
+                                                <button class="linkbutton favtoggler @(wrkbk.Item.IsFavourite? "fav":"")" onclick="favClick($(this))"><i class="fa @(wrkbk.Item.IsFavourite? "fa-star":"fa-star-o")"></i></button>
+                                                <a onclick="onWorkbookClick($(this))">@wrkbk.Item.Name</a>
+                                                <span class="tooltiptext"><img src="~/Content/Images/WorkbookPreviewImages/site-@(siteId)/workbook-@(wrkbk.Item.Id).png" alt="No Preview Image Loaded" /></span>
+                                            </span>
+                                            <ul class="nav nav-stacked views">
+                                                @foreach (var view in wrkbk.Item.Views.OrderBy(v => v.Name).Select((v, i) => new { Item = v, Index = i }))
+                                                    {
+                                                    <li class="tableauVizView @((wrkbk.Index == 0 && view.Index == 0) ? "active" : "")">
+                                                        <a class="viewlink" vid="@view.Item.Id" tableauContentUrl="@view.Item.ContentUrl" onclick="onVizViewClick($(this))">
+                                                            <i class="fa fa-file-image-o"></i> @view.Item.Name.Replace('_', ' ')
+                                                        </a>
+                                                        <p class="view-note hidden">@(view.Item.Note == null ? string.Empty : view.Item.Note)</p>
+                                                    </li>}
+                                            </ul>
+                                        </li>}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>}
+                </div>
+            </div>
+        </div>
+        }
+        <div class="@(topLevelMenu? "col-md-12" : "col-md-9") viz-content-wrapper">
+            <div id="tableaufilters" class="hidden flexdisp flexdir-row ">
+                <div class="flexdisp flexdir-column tableaufilter-container">
+                    <label for="filter_1">Filter 1</label>
+                    <select id="filter_1" class="tableaufilter" multiple>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                <div class="flexdisp flexdir-column tableaufilter-container">
+                    <label for="filter_2">Filter 2</label>
+                    <select id="filter_2" class="tableaufilter" multiple>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+            </div>
+            <div id="tableauviz"></div>
+            <div class="loading-container"></div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(onIndexPageReady);
+    </script>
+}

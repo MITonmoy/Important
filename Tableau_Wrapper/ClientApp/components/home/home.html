@@ -1,0 +1,74 @@
+<template>
+    <div class="container-fluid">
+        <div class="row flexdisp content-wrapper">
+            <div class="col-md-3 flexdisp flexdir-column sidebar-wrapper" id="sidebarmenu">
+                <div class="flexdisp flexdir-row searchbar">
+                    <form>
+                        <div class="input-group">
+                            <input id="ViewSearch" type="text" class="form-control" placeholder="Search" style="height:34px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="pull-right expcolbtn">
+                        <button class="btn btn-default"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="sidebar-wrapper-menu">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-info category" repeat.for="ctg of menuData.Categories">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_${$index}" click.delegate="onCategoryClick($event, ctg)">${ctg.Name}</a>
+                                </h6>
+                            </div>
+                            <div id="collapse_${$index}" class="panel-collapse collapse ${$first ? 'in':'' & oneTime}">
+                                <div class="panel-body">
+                                    <ul class="nav nav-stacked workbooks">
+                                        <li repeat.for="w of ctg.Workbooks" class="workbook ${selectedWorkbook.Id == w.Id ? 'active' : ''}" >
+                                            <span class="workbooklink">
+                                                <button class="linkbutton favtoggler ${w.IsFavourite? 'fav':''}"><i class="fa ${w.IsFavourite? 'fa-star':'fa-star-o'}"></i></button>
+                                                <a click.delegate="onWorkbookClick($event, w)">${w.Name}</a>
+                                                <span class="tooltiptext"><img src.bind="w.PreviewImage" alt="No Preview Image Loaded" /></span>
+                                            </span>
+                                            <ul class="nav nav-stacked views">
+                                                <li repeat.for="v of w.Views" class="tableauVizView ${selectedView.Id == v.Id ? 'active' : ''}">
+                                                    <a class="viewlink" click.delegate="onViewClick($event, v)"><i class="fa fa-file-image-o"></i> ${v.Name}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 viz-content-wrapper">
+                <div id="tableaufilters" class="hidden flexdisp flexdir-row ">
+                    <div class="flexdisp flexdir-column tableaufilter-container">
+                        <label for="filter_1">Filter 1</label>
+                        <select id="filter_1" class="tableaufilter" multiple>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </div>
+                    <div class="flexdisp flexdir-column tableaufilter-container">
+                        <label for="filter_2">Filter 2</label>
+                        <select id="filter_2" class="tableaufilter" multiple>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </div>
+                </div>
+                <compose view-model="../tableaudisplay/tableaudisplay" model.bind="menuData">
+                <div class="loading-container hidden"></div>
+            </div>
+        </div>
+    </div>
+</template>

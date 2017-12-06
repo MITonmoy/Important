@@ -1,0 +1,363 @@
+﻿
+
+.content-wrapper {
+    padding-top: 15px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 102vh;
+    margin-bottom: 5px;
+}
+
+.searchbar > form {
+    flex: 1 1 auto;
+}
+
+.searchbar .expcolbtn {
+    margin-left: 5px;
+}
+
+.horizontal-menu {
+    background-color: #cccccc;
+    width: 100%;
+    height: 20px;
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+    .horizontal-menu li.dropdown > a {
+        color: black;
+    }
+
+    .horizontal-menu .categoryContent {
+        width: 80vw;
+    }
+
+        .horizontal-menu .categoryContent .workbooks {
+            height: 50vh;
+            overflow-y: auto;
+            border-right: 2px solid lightgray;
+            word-wrap: break-word;
+        }
+
+            .horizontal-menu .categoryContent .workbooks > a {
+                position: sticky;
+                color: #563d7c;
+                font-size: 13px;
+            }
+
+                .horizontal-menu .categoryContent .workbooks > a:hover,
+                .horizontal-menu .categoryContent .workbooks > a:focus {
+                    color: #563d7c;
+                    font-weight: bold;
+                    background-color: lightgray;
+                }
+
+            .horizontal-menu .categoryContent .workbooks .favtoggler:hover:before {
+                content: "\2605";
+            }
+
+        .horizontal-menu .categoryContent .horViews {
+            height: 50vh;
+            overflow-y: auto;
+        }
+
+            .horizontal-menu .categoryContent .horViews .horView {
+                cursor: pointer;
+            }
+
+                .horizontal-menu .categoryContent .horViews .horView:hover,
+                .horizontal-menu .categoryContent .horViews .horView:focus {
+                    color: cornflowerblue;
+                }
+
+                .horizontal-menu .categoryContent .horViews .horView:hover i.fa,
+                .horizontal-menu .categoryContent .horViews .horView:focus i.fa {
+                    color: black;
+                }
+
+                .horizontal-menu .categoryContent .horViews .horView:hover i.fa:hover,
+                .horizontal-menu .categoryContent .horViews .horView:focus i.fa:hover {
+                    font-weight: bolder;
+                    font-size: large;
+                }
+
+
+.sidebar-wrapper {
+    padding-left: 2px;
+    padding-right: 2px;
+    /*height: calc(147vh);*/
+}
+
+.sidebar-wrapper-menu {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 5px 3px;
+    overflow: auto;
+    font-size: 13px;
+    margin-top: 5px;
+    height: calc(95% - 1px);
+}
+
+    .sidebar-wrapper-menu .category {
+        border-color: darkgray !important;
+    }
+
+        .sidebar-wrapper-menu .category .panel-heading {
+            background-color: darkgray !important;
+            border-color: darkgray !important;
+        }
+
+        .sidebar-wrapper-menu .category .panel-title {
+            color: black;
+        }
+
+    .sidebar-wrapper-menu .nav > .workbook > .workbooklink {
+        padding: 1px 3px;
+        border-left: 2px solid transparent;
+        word-wrap: normal;
+        font-weight: 400;
+        display: block;
+    }
+
+    .sidebar-wrapper-menu .nav > .active > .workbooklink,
+    .sidebar-wrapper-menu .nav > .active:hover > .workbooklink,
+    .sidebar-wrapper-menu .nav > .active:focus > .workbooklink {
+        font-weight: 700;
+    }
+
+    .sidebar-wrapper-menu .views .active .viewlink,
+    .sidebar-wrapper-menu .workbooks .active .workbooklink,
+    .sidebar-wrapper-menu .views .viewlink:hover,
+    .sidebar-wrapper-menu .workbooks .workbooklink:hover,
+    .sidebar-wrapper-menu .views .viewlink:focus,
+    .sidebar-wrapper-menu .workbooks .workbooklink:focus {
+        color: #563d7c;
+        text-decoration: none;
+        background-color: lightgray;
+        border-left: 2px solid #563d7c !important;
+        font-weight: 700;
+        display: block;
+    }
+
+    /*.sidebar-wrapper-menu .nav > .active > span a,
+            .sidebar-wrapper-menu .nav > li > span:hover a,
+            .sidebar-wrapper-menu .nav > li > span:focus a {
+                color: #563d7c;
+                text-decoration: none;
+            }*/
+
+    .sidebar-wrapper-menu .views {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        list-style: none;
+        font-size: 12px;
+        display: none;
+    }
+
+    .sidebar-wrapper-menu .viewlink {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        border-left: 2px solid transparent;
+        word-wrap: break-word;
+    }
+
+    .sidebar-wrapper-menu .views .active .viewlink,
+    .sidebar-wrapper-menu .views .active:hover .viewlink,
+    .sidebar-wrapper-menu .views .active:focus .viewlink {
+        font-weight: 500;
+    }
+
+    .sidebar-wrapper-menu .workbooks .active .views {
+        display: block;
+    }
+
+    .sidebar-wrapper-menu .panel {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-wrapper-menu .panel-body {
+        padding: 5px;
+    }
+
+.workbooklink {
+    position: relative;
+    display: inline-block;
+}
+
+    .workbooklink a {
+        color: #563d7c;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.viewlink {
+    cursor: pointer;
+}
+
+.viz-expanded {
+    padding-left: unset;
+}
+
+.sidebar-collapsed {
+    display: none !important;
+    transition: display 0.5s;
+}
+
+.viz-content-wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-right: unset;
+}
+
+#tableaufilters {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    /* height: calc(20% - 5px); */
+    margin-bottom: 5px;
+    padding: 3px;
+    flex-wrap: wrap;
+}
+
+.tableaufilter-container {
+    display: block;
+    width: 16.39%;
+    padding: 1px 3px;
+    border: 1px solid #9ec1fa;
+    border-radius: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+    .tableaufilter-container > label {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .tableaufilter-container .multiselect {
+        padding: 2px 5px;
+        width: 100%;
+    }
+
+    .tableaufilter-container .multiselect-selected-text {
+        font-size: 11px;
+    }
+
+.loading-container {
+    position: absolute;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    background: #fff url('Images/loading.gif') no-repeat 50% 50%;
+    height: 100%;
+    width: calc(100% - 15px);
+    z-index: 1;
+    opacity: 0.7;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.loading {
+    z-index: 30;
+}
+
+#tableauviz {
+    position: absolute;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    height: 100%;
+    width: calc(100% - 15px);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.tooltiptext {
+    display: none;
+    background-color: gainsboro;
+    border: 2px solid #864599;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /*    padding: 5px 0;*/
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+}
+
+    .tooltiptext img {
+        text-align: center;
+        height: 120px;
+        width: 120px;
+    }
+
+.sidebar-wrapper-menu .tooltiptext {
+    left: calc(100% - 120px);
+    top: -40px; /* -floor(100/2 - 18.4/2) */
+}
+
+.horizontal-menu .tooltiptext {
+    left: calc(100% - 120px);
+    top: -40px; /* -floor(100/2 - 18.4/2) */
+}
+
+.horizontal-menu .workbook:hover .tooltiptext {
+    display: block;
+}
+
+.tooltiptext::after {
+    content: " ";
+    position: absolute;
+    right: 100%; /* At the left of the tooltip */
+    top: 40px; /* -(top of .tooltiptext) */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #864599 transparent transparent;
+}
+
+.workbooklink:hover .tooltiptext {
+    display: block;
+}
+
+
+.context-menu-item {
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif !important;*/
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.modal-body textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.modal-footer.wait .waitOnNoteSave {
+    display: block;
+}
+
+.modal-footer.success .successOnNoteSave {
+    display: block;
+}
+
+.modal-footer.fail .failureOnNoteSave {
+    display: block;
+}
+
+.waitOnNoteSave {
+    float: left;
+    display: none;
+}
+
+.successOnNoteSave {
+    float: left;
+    display: none;
+}
+
+.failureOnNoteSave {
+    float: left;
+    display: none;
+}

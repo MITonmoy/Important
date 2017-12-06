@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<IndexViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Categories>
+    <Category name="Favourites" includeall="false" includefavs="true">
+      <workbooks />
+    </Category>
+    <Category name="Uncategorized" includeall="true" includefavs="false">
+      <workbooks>
+        <workbook id="5c066220-3fe2-4e5a-a67d-b9ce3a9f6475" name="MethodOfPaymentComparison Beta v1" contentUrl="02_MethodOfPaymentComparison_Beta_v1" showTabs="false" size="1" createdAt="2017-02-22T03:37:59Z" updatedAt="2017-02-22T03:38:05Z">
+          <project id="8e2d894d-b53d-44f7-94e0-4e373c69cd24" name="Default" />
+          <owner id="16db282a-b96d-428e-b8c1-637dec2d1311" />
+          <tags />
+          <IsFavourite>false</IsFavourite>
+          <views>
+            <view id="6d0ecb55-7cc8-4e11-995f-5ce662ee6359" name="Method of Payment Comparison" contentUrl="02_MethodOfPaymentComparison_Beta_v1/sheets/MethodofPaymentComparison" />
+            <view id="7f85e6a7-08d3-4139-afa5-298898435a13" name="Sheet 1" contentUrl="02_MethodOfPaymentComparison_Beta_v1/sheets/Sheet1" />
+            <view id="fa454dfb-c857-4366-95ff-4c5d2d3290ca" name="Information" contentUrl="02_MethodOfPaymentComparison_Beta_v1/sheets/Information" />
+          </views>
+        </workbook>
+        <workbook id="1943d687-f7cd-454e-a0ca-3cf849b5a49e" name="Copay card Suite NIAD" contentUrl="CopaycardSuite_NIAD" showTabs="false" size="102" createdAt="2017-02-22T14:41:07Z" updatedAt="2017-02-22T14:41:09Z">
+          <project id="8e2d894d-b53d-44f7-94e0-4e373c69cd24" name="Default" />
+          <owner id="16db282a-b96d-428e-b8c1-637dec2d1311" />
+          <tags />
+          <IsFavourite>false</IsFavourite>
+          <views>
+            <view id="d86f0796-8904-4d5d-9863-653ea2f99e7d" name="1.Market Overview" contentUrl="CopaycardSuite_NIAD/sheets/1_MarketOverview" />
+            <view id="19083019-587b-478d-a98a-a60def5abc99" name="2.Copays and Cost Impact" contentUrl="CopaycardSuite_NIAD/sheets/2_CopaysandCostImpact" />
+            <view id="9f63264d-02d0-4554-a229-0a84943a65f2" name="3.Copay Card Usage" contentUrl="CopaycardSuite_NIAD/sheets/3_CopayCardUsage" />
+            <view id="71762588-7462-4e46-b0d9-e7fbb6689dad" name="4.Card buydowns" contentUrl="CopaycardSuite_NIAD/sheets/4_Cardbuydowns" />
+            <view id="d08af323-bf99-4b57-892e-7587151469d6" name="5.Maps" contentUrl="CopaycardSuite_NIAD/sheets/5_Maps" />
+          </views>
+        </workbook>
+      </workbooks>
+    </Category>
+  </Categories>
+</IndexViewModel>

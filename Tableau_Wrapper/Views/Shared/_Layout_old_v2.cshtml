@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+@*<html manifest="@Url.Action("GetCacheManifest", "Home")">*@
+@*<html manifest="@Url.Content("~/Content/manifest.appcache")">*@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Tableau Wrapper</title>
+    @Styles.Render("~/Content/lib")
+    @Styles.Render("~/Content/css")
+    @RenderSection("customStyles", required: false)
+    @Scripts.Render("~/bundles/iecompats")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="flexdisp flexdir-column flexalgnitems-strech">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-brand visible-xs">
+                    <img class="img-responsive img-thumbnail" style="height:40px; width:60px;" src="~/Content/Images/logo_mma_gold.png" />
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs" href="Home/Index">
+                        <img src="~/Content/Images/QIMSlogo_tm_hrz_pos_resz_tran.png" style="height:40px;" alt="">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    @RenderSection("navigation", false)
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="tab-content">
+        <div id="content" class="tab-pane active">
+            <div class="body-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div class="list-group hidden" id="imorePopover">
+        @RenderSection("ellipsisMenuItems", required: false)
+    </div>
+    <!-- Edit Note Modal -->
+    <div id="editNoteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit Note</h4>
+                </div>
+                <div class="modal-body" workbookName="" viewName="">
+                    <textarea rows="4" placeholder="Your notes should appear here."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="waitOnNoteSave"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+                    <div class="successOnNoteSave text-success">Saved successfully</div>
+                    <div class="failureOnNoteSave text-danger">Error Occurred when saving notes</div>
+                    <button type="button" class="btn btn-default"><i class="fa fa-envelope-o"></i> Send Mail</button>
+                    @*<button type="button" class="btn btn-info" onclick="saveViewNote($('#editNoteModal .modal-body').attr('workbookName'), $('#editNoteModal .modal-body').attr('viewName'), $('#editNoteModal .modal-body').find('textarea').val())">Save</button>*@
+                    <button type="button" class="btn btn-info savebtn">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe Modal -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="subscribeModalLabel">Add Subscription</h4>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form class="subscribeForm form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="subscribeScope">Subscribe to</label>
+                            <div class="col-sm-9 btn-group" data-toggle="buttons" id="subscribeScope">
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="scope" value="view" autocomplete="off" checked> This View
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="scope" value="workbook" autocomplete="off"> Entire Workbook
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="scheduleSelector">Schedule</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="scheduleSelector" name="schedule">
+                                    <option value="1">Monday Mornings</option>
+                                    <option value="2">Saturday Mornings</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="subjectInput">Subject</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="subjectInput" name="subject" placeholder="Specify Subject" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <div class="waitOnNoteSave"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+                    <div class="successOnNoteSave text-success">Subscribed successfully</div>
+                    <div class="failureOnNoteSave text-danger">Error Occurred when creating subscription</div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary"onclick="$('#subscribeModal form').submit()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="well-sm">
+                <p>&copy; QuintilesIMS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*<script src="~/Scripts/tableau-2.2.0.js"></script>*@
+    <script src="~/Scripts/tableau-2.1.1.js"></script>
+    <script src="~/Scripts/tableau-2.js"></script>
+
+    <script type="text/javascript" lang="en">
+        var baseUrl = '@Url.Content("~/")'
+    </script>
+
+    <script src="~/Scripts/app.js"></script>
+    <script src="~/Scripts/tableau-viz-manipulator.js"></script>
+    <script src="~/Scripts/home-index.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

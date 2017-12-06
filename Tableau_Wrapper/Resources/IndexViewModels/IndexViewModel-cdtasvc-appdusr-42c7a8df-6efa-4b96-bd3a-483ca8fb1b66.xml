@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<IndexViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Categories>
+    <Category name="Favourites" includeall="false" includefavs="true">
+      <workbooks />
+    </Category>
+    <Category name="Uncategorized" includeall="true" includefavs="false">
+      <workbooks />
+    </Category>
+  </Categories>
+</IndexViewModel>
